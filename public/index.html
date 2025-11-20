@@ -1,23 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-<title>Frontend Mentor | Calculator app</title>
-
-<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-<style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
 </head>
-<body>
+<body class="h-screen flex items-center justify-center bg-gray-600">
+    <div class=" p-3 rounded-xl">
+        <input type="text" id="display" readonly value="0" class="bg-gray-900 text-white text-right p-4 rounded text-3xl">
 
-    <div class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-        Coded by <a href="#">Your Name Here</a>.
+        <div class="grid grid-cols-4 gap-3 mt-5 bg-gray-800 p-3 rounded">
+            <button class="bg-white p-2 rounded text-xl" data-number="7">7</button>
+            <button class="bg-white p-2 rounded text-xl" data-number="8">8</button>
+            <button class="bg-white rounded p-2 text-xl" data-number="9">9</button>
+            <button id="delete" class="bg-slate-400 rounded text-white">DEL</button>
+
+            <button data-number="4" class="bg-white p-2 rounded text-xl">4</button>
+            <button data-number="5" class="bg-white p-2 rounded text-xl">5</button>
+            <button data-number="6" class="bg-white p-2 rounded text-xl">6</button>
+            <button data-operator="+" class="bg-white p-2 rounded text-xl">+</button>
+
+            <button data-number="1" class="bg-white p-2 rounded text-xl">1</button>
+            <button data-number="2">2</button>
+            <button data-number="3">3</button>
+            <button data-operator="-">-</button>
+
+            <button data-number=".">.</button>
+            <button data-number="0">0</button>
+            <button data-operator="/">/</button>
+            <button data-operator="*">×</button>
+
+            <button id="clear" class="col-span-2">RESET</button>
+            <button class="col-span-2">=</button>
+        </div>
     </div>
 </body>
 </html>
