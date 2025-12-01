@@ -1,6 +1,11 @@
+// setting up variables to track the cal state
+// this code finds the html element with and ID of display
 const display = document.getElementById('display');
+// holds whatever number the user is currently typing
 let currentInput = '0';
+// stores the number the user entered before selecting an operator
 let currentOutput = '';
+// this stores the chosen math operator
 let operation = null;
 
 const numberBtns = document.querySelectorAll('.number');
