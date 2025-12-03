@@ -28,14 +28,14 @@ numberBtns.forEach(button => {
         display.value = currentInput
     });
 });
-
+// Handle clear button
 clearBtns.addEventListener('click', function() {
     currentInput = '0';
     previousInput = '';
     operation = null;
     display.value = currentInput;
 });
-
+// Handle delete button
 deleteBtns.addEventListener('click', function() {
     // Remove last character
     currentInput = currentInput.slice(0, -1);
@@ -47,7 +47,7 @@ deleteBtns.addEventListener('click', function() {
     
     display.value = currentInput;
 });
-
+// Handle operator buttons (+, -, ×, ÷)
 operatorBtns.forEach(button => {
     button.addEventListener('click', function() {
         const op = button.getAttribute('data-operator');
@@ -57,7 +57,7 @@ operatorBtns.forEach(button => {
         operation = op;
     });
 });
-
+// Handle equals button (the actual calculation)
 equalsBtns.addEventListener('click', function() {
     if (operation === null) return;
     
