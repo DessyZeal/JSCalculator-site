@@ -14,6 +14,7 @@ const equalsBtns = document.getElementById('equals');
 const clearBtns = document.getElementById('clear');
 const deleteBtns = document.getElementById('delete');
 
+// loops through every button inside numberBtns
 numberBtns.forEach(button => {
     button.addEventListener('click', () => {
         const num = button.getAttribute('data-number');
@@ -26,4 +27,16 @@ numberBtns.forEach(button => {
 
         display.value = currentInput
     });
+});
+
+deleteBtns.addEventListener('click', function() {
+    // Remove last character
+    currentInput = currentInput.slice(0, -1);
+    
+    // If empty, show 0
+    if (currentInput === '') {
+        currentInput = '0';
+    }
+    
+    display.value = currentInput;
 });
